@@ -1,27 +1,9 @@
 <div class="ors-route-card">
-    <div class="left" ng-switch="$ctrl.data.info.query.profile">
-        <div ng-switch-when="driving-car">
+    <div class="right">
+        <div class="summary-item">
             <i class="fa fa-lg fa-car">
             </i>
         </div>
-        <div ng-switch-when="cycling-regular|cycling-road|cycling-safe|cycling-mountain|cycling-tour|cycling-electric" ng-switch-when-separator="|">
-            <i class="fa fa-lg fa-bicycle">
-            </i>
-        </div>
-        <div ng-switch-when="driving-hgv">
-            <i class="fa fa-lg fa-bus">
-            </i>
-        </div>
-        <div ng-switch-when="wheelchair">
-            <i class="fa fa-lg fa-wheelchair">
-            </i>
-        </div>
-        <div ng-switch-when="foot-walking|foot-hiking" ng-switch-when-separator="|">
-            <i class="fa fa-lg fa-male">
-            </i>
-        </div>
-    </div>
-    <div class="right">
         <div class="summary-item" ng-if="route.summary.duration" tooltip-side="top" tooltip-template="{{('DURATION' | translate)}}" tooltips="">
             <i class="fa fa-clock-o">
             </i>
@@ -52,8 +34,17 @@
             <span ng-bind-html="(route.summary.descent | distance)">
             </span>
         </div>
-        <button class="summary-select" data-ng-click="$ctrl.setIdx($index); $ctrl.showInstructions();" ng-bind-html="('DETAILS' | translate)" ng-show="!$ctrl.shouldDisplayRouteDetails">
-            >
+        <div class="summary-item">
+            <button class="ors-controls-button left" data-ng-click=" $ctrl.showExport=! $ctrl.showExport ">
+            <i class="fa fa-download" tooltips tooltip-template="{{( 'EXPORT' | translate)}} " tooltip-side="top " tooltip-append-to-body="true ">
+            </i>
+          </button>
+        </div>
+        <button class="summary-select" data-ng-click="$ctrl.setIdx($index); $ctrl.showInstructions();" ng-bind-html="('DETAILS' | translate)" ng-show="!$ctrl.shouldDisplayRouteDetails" style="padding-left: 36px">
         </button>
     </div>
 </div>
+<ors-modal data-ng-show="$ctrl.showExport " show="$ctrl.showExport ">
+    <ors-export-route-controls>
+    </ors-export-route-controls>
+</ors-modal>
