@@ -5,6 +5,11 @@
  * orsNamespaces and schemata e.g. for XML requests to services
  */
 var orsNamespaces = {};
+orsNamespaces.schemata = {
+    gpxService: 'http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd',
+    tcxService: 'http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2 http://www.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd',
+    kmlService: 'http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd'
+};
 /**
  * services that are called by openrouteservice, e.g. to determine the route between two waypoints
  * important note: all these URLs must be listed in the cgi-bin/proxy.cgi script of the server running ORS!
