@@ -60,6 +60,11 @@ angular.module('orsApp').directive('orsMap', () => {
                 position: "bottomright",
                 mappings: mappings
             });
+            // Scale bar
+            $scope.scale = L.control.scale({
+                position: 'topleft'
+            });
+            $scope.mapModel.map.addControl($scope.scale);
             // logos
             $scope.brand = L.control({
                 position: 'bottomleft'
