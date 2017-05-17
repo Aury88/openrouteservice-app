@@ -1,37 +1,77 @@
 <header>
-    <h1 ng-bind-html="'Info & Contact'">
+  <h1 ng-bind-html="'Info & Contact'">
     </h1>
 </header>
 <div class="ui divider">
 </div>
+<!-- OpenRouteService.org allows you to approximate your geographic location, when accessed via (mobile) browser. To provide service, OpenRouteService must record your route information, including your point of origin, the address of your destination, and the route you are instructed to follow. We do not share this aggregated location information or connect this information with your personal information.-->
 <section>
-  <!--Verweis auf Info-Text einfügen?!-->
-  <p ng-bind-html="'The <b>GIScience Research Group</b> set up this <b>Disaster OpenRouteService</b> to support the work of humanitarian actors and disaster responders in the most vulnerable and disaster prone regions of the world.<br><br>
-Thanks to the work of the Humanitarian OpenStreetMap Team and the Missing Maps project, in disaster situations the OSM data is continually updated and enriched with critical information. Thus the road network is constantly enlarged by thousands of volunteers.<br><br>
-The <b>Disaster OpenRouteService</b> has the exceptional ability to take this data soure update into account and updates itself within very short periods of time (max. 24h). Furthermoe, it considers passable and impassable tagged ways (impassable=yes or status=impassable) and dynamically adjusts the graph weights of OSM streets accordingly.
-This allows disaster responders to navigate on basis of the most current road network.<br><br>
-The <b>Disaster OpenRouteService</b> also provides an accessibility analysis service for a given location, the possibility to export GPS tracks to be used offline in mobile devices. A special feature is the interactive <b>area avoid polygon</b> tool. It allows to interactively draw polygons into the map which mark severly affected, not accessible, or impassable road section which should be avoid for navigaion, or are potentially valuable for Search and Rescue (SAR) units.'">
+  <div class="ui positive message textleft">
+    <div class="header" ng-bind-html="'Donate!'">
+    </div>
+    <span ng-bind-html="'Please donate your geographic data to'">
+        </span>
+    <a class="link" href="http://www.OpenStreetMap.org">
+            OpenStreetMap.org
+        </a>
+  </div>
+  <p ng-bind-html="'The <b>GIScience Research Group</b> set up this <b>Disaster OpenRouteService</b> to support the work of humanitarian actors and disaster responders in the most vulnerable and disaster prone regions of the world'">
+  </p>
+  <p ng-bind-html="'Thanks to the work of the Humanitarian OpenStreetMap Team and the Missing Maps project, in disaster situations the OSM data is continually updated and enriched with critical information. Thus the road network is constantly enlarged by thousands of volunteers.'">
+  </p>
+  <p ng-bind-html="'The <b>Disaster OpenRouteService</b> has the exceptional ability to take this data soure update into account and updates itself within very short periods of time (max. 24h). Furthermore, it considers passable and impassable tagged ways (impassable=yes or status=impassable) and dynamically adjusts the graph weights of OSM streets accordingly. This allows disaster responders to navigate on basis of the most current road network.'">
+  </p>
+  <p ng-bind-html="'The <b>Disaster OpenRouteService</b> also provides an accessibility analysis service for a given location, the possibility to export GPS tracks to be used offline in mobile devices. A special feature is the interactive <b>area avoid polygon</b> tool. It allows to interactively draw polygons into the map which mark severly affected, not accessible, or impassable road section which should be avoid for navigaion, or are potentially valuable for Search and Rescue (SAR) units.'">
   </p>
 </section>
 <div class="ui divider">
 </div>
 <section>
-  <img ng-src="img/HeiGIT.png"
-      width="237px"
-      height="60px">
+  <img ng-src="img/HeiGIT.png" width="237px" height="60px">
   </img>
 </section>
 <section>
-  <img ng-src="img/disastermappers.png"
-      width="60px"
-      height="60px">
+  <img ng-src="img/disastermappers.png" width="60px" height="60px">
   </img>
-  <img ng-src="img/HOT.png"
-      width="100px"
-      height="60px">
+  <img ng-src="img/HOT.png" width="100px" height="60px">
   </img>
-  <img ng-src="img/missingmaps.png"
-      width="141px"
-      height="60px">
+  <img ng-src="img/missingmaps.png" width="141px" height="60px">
   </img>
+</section>
+<div class="ui divider">
+</div>
+<section>
+  <h4 ng-bind-html="'Software & Libraries'">
+    </h4>
+  <p>
+    Map Background Layer:
+    <a class="link" href="http://www.openmapsurfer.uni-hd.de" target="_blank">
+            OpenMapSurfer Tiles & WMS
+        </a>
+  </p>
+  <p>
+    Hillshade Layer:
+    <a class="link" href="http://srtm.csi.cgiar.org" target="_blank">
+            CIAT-CSI SRTM
+        </a> . Users are prohibited from any commercial, non-free resale, or redistribution without explicit written permission from CIAT. Original data by Jarvis A., H.I. Reuter, A. Nelson, E. Guevara, 2008, Hole-filled seamless SRTM data V4, International
+    Centre for Tropical Agriculture (CIAT)
+  </p>
+  <p>
+    TMC traffic Messages:
+    <a class="link" href="http://www.bast.de" target="_blank">
+            BASt
+        </a>
+  </p>
+  <p>
+    We use different open source libraries to supporting the development of this web application. These can be found within the corresponding package files on
+    <a class="link" href="https://github.com/GIScience/openrouteservice-ng/" target="_blank">
+            github
+        </a> .
+  </p>
+  <p>
+    Please report and feel free to commit your changes on
+    <a class="link" href="https://github.com/GIScience/openrouteservice-ng/issues" target="_blank">
+            github
+        </a> .
+  </p>
 </section>
