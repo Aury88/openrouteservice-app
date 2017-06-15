@@ -200,7 +200,7 @@ angular.module('orsApp').directive('orsMap', () => {
         if (mapOptions.mapZoom) $scope.mapModel.map.setZoom(mapOptions.mapZoom);
       } else {
         // Africa Bounding Box
-        $scope.orsMap.setView([21.445313, 5.441022], 9);
+        $scope.orsMap.setView([21.445313, 5.441022], 5);
         // Welcome box
         $scope.welcomeMsgBox = L.control({
           position: 'topright'
